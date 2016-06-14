@@ -1,0 +1,55 @@
+$display-font-color = rgb(0,128,128)
+
+/* button */
+$btn-color = #6495ED
+$btn-bg-color = #D0DFF9
+
+$btn-hover-color = #FFF
+$btn-bg-hover-color = #6495ED
+
+$btn-active-color = #FFF
+$btn-bg-active-color = #D0DFF9
+
+$btn-disabled-color = lightgrey
+$btn-bg-disabled-color = snow
+
+.block {
+  margin 30px
+  text-align center
+}
+
+.msgBlock {
+  margin 100px 30px 30px
+  text-align center
+  font-weight bold
+  font-size 28px
+  color $display-font-color
+}
+
+.Btn {
+  width 100px
+  margin 10px
+  padding 5px
+  font-weight bold
+  font-size 24px
+  border-radius 15px
+  border 2px solid $btn-color
+  outline none
+  color $btn-color
+  background-color $btn-bg-color
+
+  &:hover {
+    color $btn-hover-color
+    background-color $btn-bg-hover-color
+  }
+  &:active {
+    outline none
+    color $btn-active-color
+    background-color $btn-bg-active-color
+  }
+  &:disabled {
+    border-color $btn-disabled-color
+    color $btn-disabled-color
+    background-color $btn-bg-disabled-color
+  }
+}

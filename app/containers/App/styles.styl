@@ -1,0 +1,36 @@
+@css {
+  @import 'normalize.css';
+}
+$color-bg = #f9f9f9;
+$color-font = cornflowerblue;
+$font-family = Helvetica, Arial, Sans-serif, Verdana, 'Noto Sans TC';
+$font-size = 1.2em;
+
+
+html {
+  -moz-osx-font-smoothing grayscale
+  -webkit-font-smoothing antialiased
+  text-rendering optimizeLegibility
+}
+
+body {
+  background-color $color-bg
+  color $color-font
+  font-family $font-family
+  font-size $font-size
+  user-select none
+}
+
+a {
+  text-decoration none
+}
+
+ul{
+  list-style-type none
+}
+
+*,
+*:before,
+*:after {
+  box-sizing border-box
+}
