@@ -5,6 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "node dev-server.js",
+    "build": "NODE_ENV=production webpack --config webpack.config.prod.js --progress && cp ./public/index.html ./dist",
+    "clean": "rimraf dist && rm -f dist/*",
+    "deploy": "npm run clean && npm run build && npm run gh",
+    "gh": "gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "chiara yen",
@@ -21,6 +25,7 @@
     "css-loader": "^0.23.1",
     "express": "^4.13.4",
     "file-loader": "^0.8.5",
+    "gh-pages": "^0.11.0",
     "json-loader": "^0.5.4",
     "postcss-import": "^7.x.x",
     "postcss-loader": "^0.9.1",
@@ -35,12 +40,15 @@
     "webpack-hot-middleware": "^2.10.0"
   },
   "dependencies": {
+    "autoprefixer": "^6.3.6",
+    "extract-text-webpack-plugin": "^1.0.1",
     "normalize.css": "^4.1.1",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
     "react-redux": "^4.4.5",
     "redux": "^3.5.2",
     "redux-logger": "^2.6.1",
-    "redux-saga": "^0.10.5"
+    "redux-saga": "^0.10.5",
+    "rimraf": "^2.5.2"
   }
 }
